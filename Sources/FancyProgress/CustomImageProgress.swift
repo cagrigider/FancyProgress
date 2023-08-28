@@ -9,27 +9,27 @@ import Foundation
 import SwiftUI
 import Combine
 
-/// Progress view with given image
-/// - Parameters:
-///   - progressImage: The image to show while continuing.
-///   - widthHeightRatio: Width / Height ratio of the given image.
-///   - maxBarCount: Number of bars.
-///   - spaceBetweenBars: Spacing amount between each bars.
-///   - barColor: Color of progress bars.
-///   - backgroundColor: The color of the area on which the bars stand.
-///   - interval: The date range over which the view should progress.
 public struct CustomImageProgress: View {
     var progressImage: Image
-    var widthHeightRatio: CGFloat = 1.0
-    var maxBarCount: Int = 10
-    var spaceBetweenBars: CGFloat = 4.0
-    var barColor: Color = .white
-    var backgroundColor: Color = .black
-    var interval: CGFloat = 0.3
+    var widthHeightRatio: CGFloat
+    var maxBarCount: Int
+    var spaceBetweenBars: CGFloat
+    var barColor: Color
+    var backgroundColor: Color
+    var interval: CGFloat
 
     @State private var stepCount: Int = 4
     @State private var timer: Publishers.Autoconnect<Timer.TimerPublisher>
 
+    /// Progress view with given image
+    /// - Parameters:
+    ///   - progressImage: The image to show while continuing.
+    ///   - widthHeightRatio: Width / Height ratio of the given image.
+    ///   - maxBarCount: Number of bars.
+    ///   - spaceBetweenBars: Spacing amount between each bars.
+    ///   - barColor: Color of progress bars.
+    ///   - backgroundColor: The color of the area on which the bars stand.
+    ///   - interval: The date range over which the view should progress.
     public init(progressImage: Image,
          widthHeightRatio: CGFloat = 1.0,
          maxBarCount: Int = 10,
