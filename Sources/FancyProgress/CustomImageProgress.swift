@@ -9,6 +9,15 @@ import Foundation
 import SwiftUI
 import Combine
 
+/// Progress view with given image
+/// - Parameters:
+///   - progressImage: The image to show while continuing.
+///   - widthHeightRatio: Width / Height ratio of the given image.
+///   - maxBarCount: Number of bars.
+///   - spaceBetweenBars: Spacing amount between each bars.
+///   - barColor: Color of progress bars.
+///   - backgroundColor: The color of the area on which the bars stand.
+///   - interval: The date range over which the view should progress.
 public struct CustomImageProgress: View {
     var progressImage: Image
     var widthHeightRatio: CGFloat = 1.0

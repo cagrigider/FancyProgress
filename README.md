@@ -19,7 +19,7 @@ This project is a simple progress view customizer.
 ## Technologies
 Project is created with:
 * Swift version: 5.8
-* Xcode version : 14.3.1
+* Xcode version: 14.3.1
     
 ## Installation
 Currently only Swift Package Manager is available.
@@ -36,17 +36,42 @@ Currently, FancyProgress has 3 different customizable styles.
 * ### Snake
 Old snake style progress.
 
-![Snake Progress Demo](Sources/FancyProgress/Gifs/snake.gif)
+![Snake Progress Demo](Sources/FancyProgress/Gifs/snake.gif)  
+| Parameter Name | Description |
+| ------------- | ------------- |
+| maxBarCount | Number of bars. |
+| spaceBetweenBars | Spacing amount between each bars. |
+| barColor | Color of progress bars. |
+| backgroundColor | The color of the area on which the bars stand. |
+| interval | The date range over which the view should progress. |
 
 * ### KITT
 Old dream Knight Rider style progress. 
 
-![KITT Progress Demo](Sources/FancyProgress/Gifs/kitt.gif)
+![KITT Progress Demo](Sources/FancyProgress/Gifs/kitt.gif)  
+| Parameter Name | Description |
+| ------------- | ------------- |
+| maxBarCount | Number of bars. |
+| barColor | Color of progress bars. |
+| backgroundColor | The color of the area on which the bars stand. |
+| remainingOpacity | Opacity value of the not showing dots. |
+| showingDotCount | The number of dots showing around center dot while moving. |
+| interval | The date range over which the view should progress. |
+
 
 * ### CustomImage
 A progress view with selected custom image and ratio. Developers can put custom images on loading such as company logos.
 
-![Custom Image Progress Demo](Sources/FancyProgress/Gifs/customImage.gif)
+![Custom Image Progress Demo](Sources/FancyProgress/Gifs/customImage.gif)  
+| Parameter Name | Description |
+| ------------- | ------------- |
+| progressImage | The image to show while continuing. |
+| widthHeightRatio |  Width / Height ratio of the given image. |
+| maxBarCount | Number of bars. |
+| spaceBetweenBars | Spacing amount between each bars. |
+| barColor | Color of progress bars. |
+| backgroundColor | The color of the area on which the bars stand. |
+| interval | The date range over which the view should progress. |
 
 ## Contributing
 
