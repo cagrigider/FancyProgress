@@ -9,23 +9,23 @@ import Foundation
 import SwiftUI
 import Combine
 
-/// Snake style progress view
-/// - Parameters:
-///   - maxBarCount: Number of bars.
-///   - spaceBetweenBars: Spacing amount between each bars.
-///   - barColor: Color of progress bars.
-///   - backgroundColor: The color of the area on which the bars stand.
-///   - interval: The date range over which the view should progress.
 public struct SnakeProgress: View {
-    var maxBarCount: Int = 10
-    var spaceBetweenBars: CGFloat = 4.0
-    var barColor: Color = .white
-    var backgroundColor: Color = .black
-    var interval: CGFloat = 0.3
+    var maxBarCount: Int
+    var spaceBetweenBars: CGFloat
+    var barColor: Color
+    var backgroundColor: Color
+    var interval: CGFloat
 
     @State private var stepCount: Int = 4
     @State private var timer: Publishers.Autoconnect<Timer.TimerPublisher>
 
+    /// Snake style progress view
+    /// - Parameters:
+    ///   - maxBarCount: Number of bars.
+    ///   - spaceBetweenBars: Spacing amount between each bars.
+    ///   - barColor: Color of progress bars.
+    ///   - backgroundColor: The color of the area on which the bars stand.
+    ///   - interval: The date range over which the view should progress.
     public init(maxBarCount: Int = 10,
          spaceBetweenBars: CGFloat = 4.0,
          barColor: Color = .white,

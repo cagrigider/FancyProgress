@@ -9,25 +9,26 @@ import Foundation
 import SwiftUI
 import Combine
 
-/// KITT style progress view
-/// - Parameters:
-///   - maxBarCount: Number of bars.
-///   - barColor: Color of progress bars.
-///   - backgroundColor: The color of the area on which the bars stand.
-///   - remainingOpacity: Opacity value of the not showing dots.
-///   - showingDotCount: The number of dots showing around center dot while moving.
-///   - interval: The date range over which the view should progress.
 public struct KITTProgress: View {
-    var maxBarCount: Int = 10
-    var barColor: Color = .white
-    var backgroundColor: Color = .black
-    var remainingOpacity: CGFloat = 0.5
-    var showingDotCount: Int = 5
-    var interval: CGFloat = 0.3
+    var maxBarCount: Int
+    var barColor: Color
+    var backgroundColor: Color
+    var remainingOpacity: CGFloat
+    var showingDotCount: Int
+    var interval: CGFloat
 
     @State private var stepCount: Int = 0
     @State private var step = 1
     @State private var timer: Publishers.Autoconnect<Timer.TimerPublisher>
+
+    /// KITT style progress view
+    /// - Parameters:
+    ///   - maxBarCount: Number of bars.
+    ///   - barColor: Color of progress bars.
+    ///   - backgroundColor: The color of the area on which the bars stand.
+    ///   - remainingOpacity: Opacity value of the not showing dots.
+    ///   - showingDotCount: The number of dots showing around center dot while moving.
+    ///   - interval: The date range over which the view should progress.
 
     public init(maxBarCount: Int = 10,
          barColor: Color = .red,
